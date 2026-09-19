@@ -1,0 +1,22 @@
+]633;E;echo "# Development Tool Versions";0d685acf-56ea-4cd8-939d-061d1fe3aada]633;C# Development Tool Versions
+
+Git:
+git version 2.53.0
+
+Curl:
+curl 8.18.0 (x86_64-pc-linux-gnu) libcurl/8.18.0 OpenSSL/3.5.5 zlib/1.3.1 brotli/1.2.0 zstd/1.5.7 libidn2/2.3.8 libpsl/0.21.2 libssh2/1.11.1 nghttp2/1.68.0 librtmp/2.3 mit-krb5/1.22.1 OpenLDAP/2.6.10
+
+Wget:
+GNU Wget 1.25.0 built on linux-gnu.
+
+jq:
+jq-1.8.1
+
+GCC:
+gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+
+Make:
+GNU Make 4.4.1
+
+VS Code:
+1.138.0
