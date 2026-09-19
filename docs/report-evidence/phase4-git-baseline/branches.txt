@@ -1,0 +1,5 @@
+  develop
+  main
+* member1/project-foundation
+  remotes/origin/develop
+  remotes/origin/main
