@@ -1,0 +1,7 @@
+* 62f7984 (HEAD -> member1/project-foundation, tag: vulnerable-baseline, origin/main, origin/develop, main, develop) chore: import OWASP NodeGoat vulnerable baseline
+*   821210c Resolved merge conflict in README
+|\  
+| * a94a7b8 Initial commit
+* 69ca9bf chore: configure and verify Docker development environment
+* e389b76 chore: complete phase 1 environment setup
+* 9392c3a chore: initialize IE3142 NodeGoat DevSecOps project
