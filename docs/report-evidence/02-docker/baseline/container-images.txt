@@ -1,0 +1,3 @@
+CONTAINER                    REPOSITORY               TAG                 PLATFORM            IMAGE ID            SIZE                CREATED
+nodegoat-devsecops-mongo-1   mongo                    4.4                 linux/amd64         4be76f674fc4        591MB               8 months ago
+nodegoat-devsecops-web-1     nodegoat-devsecops-web   latest              linux/amd64         182dc58e885a        181MB               23 hours ago
