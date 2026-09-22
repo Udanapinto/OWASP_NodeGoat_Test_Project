@@ -278,6 +278,12 @@ High
 
 Candidate threat — requires local confirmation.
 
+
+**CONFIRMED** — Vulnerability reproduced against pinned NodeGoat version on [date].
+Evidence: `docs/vulnerabilities/VULN-01/`
+Jira: NGDS-1
+
+
 ---
 
 # Risk Summary
@@ -288,3 +294,6 @@ Candidate threat — requires local confirmation.
 | T2 | Injection | Tampering | 3 | 3 | 9 | Critical |
 | T3 | Stored XSS | Tampering | 3 | 2 | 6 | High |
 | T4 | Broken authorization | Elevation of Privilege | 2 | 3 | 6 | High |
+
+
+
