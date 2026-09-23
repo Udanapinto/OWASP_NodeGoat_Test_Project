@@ -88,9 +88,7 @@ function UserDAO(db) {
             }
         };
 
-        usersCol.findOne({
-            userName: userName
-        }, validateUserDoc);
+        usersCol.findOne({ userName: { $eq: String(userName) } }, validateUserDoc);
     };
 
     // This is the good one, see the next function
