@@ -1,0 +1,123 @@
+1086648 | high | handlebars | Arbitrary Code Execution in handlebars
+1086650 | high | handlebars | Prototype Pollution in handlebars
+1086754 | high | mongodb | Denial of Service in mongodb
+1087512 | high | websocket-extensions | Regular Expression Denial of Service in websocket-extensions (NPM package)
+1087525 | high | qs | Prototype Pollution Protection Bypass in qs
+1087527 | high | qs | Prototype Pollution Protection Bypass in qs
+1088328 | critical | growl | Growl before 1.10.0 vulnerable to Command Injection
+1088715 | high | nconf | Prototype Pollution in nconf
+1088925 | high | npm | Incorrect Permission Assignment for Critical Resource in NPM
+1089188 | high | i | inflect vulnerable to Inefficient Regular Expression Complexity
+1089206 | high | npm | npm Vulnerable to Global node_modules Binary Overwrite
+1089207 | high | npm | npm symlink reference outside of node_modules
+1089418 | high | sshpk | Regular Expression Denial of Service in sshpk
+1089684 | high | tar | Arbitrary File Creation/Overwrite due to insufficient absolute path sanitization
+1089685 | high | tar | Arbitrary File Creation/Overwrite due to insufficient absolute path sanitization
+1089836 | high | grunt | Arbitrary Code Execution in grunt
+1089876 | high | npm-user-validate | Regular expression denial of service in npm-user-validate
+1090086 | high | npm | Arbitrary File Write in npm
+1090967 | high | qs | Denial-of-Service Extended Event Loop Blocking in qs
+1091414 | high | swig | Arbitrary local file read vulnerability during template rendering 
+1091643 | high | grunt | Race Condition in Grunt
+1091678 | high | hawk | Regular Expression Denial of Service in hawk
+1091680 | high | brace-expansion | ReDoS in brace-expansion
+1091683 | high | qs | Denial-of-Service Memory Exhaustion in qs
+1091686 | high | uglify-js | Regular Expression Denial of Service in uglify-js
+1091853 | critical | fsevents | Malware in fsevents
+1093224 | high | ini | ini before 1.3.6 vulnerable to Prototype Pollution via ini.parse
+1093420 | critical | getobject | Prototype pollution in getobject
+1093522 | high | marked | Regular Expression Denial of Service in marked
+1093710 | high | minimatch | Regular Expression Denial of Service in minimatch
+1093780 | high | mime | mime Regular Expression Denial of Service when MIME lookup performed on untrusted user input
+1094087 | high | decode-uri-component | decode-uri-component vulnerable to Denial of Service (DoS)
+1094090 | high | ansi-regex | Inefficient Regular Expression Complexity in chalk/ansi-regex
+1094457 | high | debug | debug Inefficient Regular Expression Complexity vulnerability
+1094511 | high | set-value | Prototype Pollution in set-value
+1094997 | critical | fsevents | Code injection in fsevents
+1095047 | critical | mixin-deep | Prototype Pollution in mixin-deep
+1095051 | high | marked | Inefficient Regular Expression Complexity in marked
+1095052 | high | marked | Inefficient Regular Expression Complexity in marked
+1095056 | high | kind-of | Validation Bypass in kind-of
+1095058 | high | js-yaml | Code Injection in js-yaml
+1095062 | high | hawk | Uncontrolled Resource Consumption in Hawk
+1095063 | critical | handlebars | Remote code execution in handlebars when compiling templates
+1095064 | high | handlebars | Arbitrary Code Execution in Handlebars
+1095067 | high | handlebars | Prototype Pollution in handlebars
+1095069 | high | handlebars | Regular Expression Denial of Service in Handlebars
+1095087 | high | y18n | Prototype Pollution in y18n
+1095100 | high | trim-newlines | Uncontrolled Resource Consumption in trim-newlines
+1095103 | high | tough-cookie | Regular Expression Denial of Service in tough-cookie
+1095117 | high | tar | Arbitrary File Creation/Overwrite on Windows via insufficient relative path sanitization
+1095119 | high | tar | Arbitrary File Overwrite in tar
+1095126 | high | shelljs | Improper Privilege Management in shelljs
+1095129 | critical | set-value | Prototype Pollution in set-value
+1096309 | high | tar | Arbitrary File Creation/Overwrite via insufficient symlink protection due to directory cache poisoning
+1096376 | high | tar | Arbitrary File Creation/Overwrite via insufficient symlink protection due to directory cache poisoning using symbolic links
+1096404 | high | handlebars | Arbitrary Code Execution in handlebars
+1096411 | high | tar | Arbitrary File Creation/Overwrite via insufficient symlink protection due to directory cache poisoning using symbolic links
+1096485 | high | minimatch | minimatch ReDoS vulnerability
+1097677 | critical | minimist | Prototype Pollution in minimist
+1097678 | critical | minimist | Prototype Pollution in minimist
+1097691 | high | async | Prototype Pollution in async
+1098094 | high | braces | Uncontrolled resource consumption in braces
+1099520 | high | body-parser | body-parser vulnerable to denial of service when url encoding is enabled
+1101850 | high | path-to-regexp | path-to-regexp outputs backtracking regular expressions
+1101855 | critical | json-schema | json-schema is vulnerable to Prototype Pollution
+1102316 | critical | bson | Deserialization of Untrusted Data in bson
+1102328 | high | dot-prop | dot-prop Prototype Pollution vulnerability
+1102332 | critical | handlebars | Prototype Pollution in handlebars
+1102333 | high | diff | Regular Expression Denial of Service (ReDoS)
+1102334 | high | fstream | Arbitrary File Overwrite in fstream
+1102335 | critical | handlebars | Prototype Pollution in handlebars
+1104115 | high | qs | qs vulnerable to Prototype Pollution
+1104116 | high | qs | qs vulnerable to Prototype Pollution
+1104118 | high | qs | qs vulnerable to Prototype Pollution
+1104663 | high | cross-spawn | Regular Expression Denial of Service (ReDoS) in cross-spawn
+1104664 | high | cross-spawn | Regular Expression Denial of Service (ReDoS) in cross-spawn
+1105092 | high | hoek | hoek subject to prototype pollution via the clone function.
+1105121 | high | hoek | Prototype Pollution in hoek
+1105199 | high | path-to-regexp | path-to-regexp contains a ReDoS
+1106913 | high | lodash | Command Injection in lodash
+1106914 | high | lodash | Prototype Pollution in lodash
+1106918 | critical | lodash | Prototype Pollution in lodash
+1106920 | high | lodash | Prototype Pollution in lodash
+1109540 | critical | form-data | form-data uses unsafe random function in form-data for choosing boundary
+1109570 | critical | underscore | Arbitrary Code Execution in underscore
+1109571 | high | moment | Path Traversal: 'dir/../../filename' in moment.locale
+1109572 | high | moment | Moment.js vulnerable to Inefficient Regular Expression Complexity
+1112659 | high | tar | node-tar Vulnerable to Arbitrary File Creation/Overwrite via Hardlink Path Traversal
+1112918 | high | semver | semver vulnerable to Regular Expression Denial of Service
+1113300 | high | tar | node-tar is Vulnerable to Arbitrary File Overwrite and Symlink Poisoning via Insufficient Path Sanitization
+1113375 | high | tar | Arbitrary File Read/Write via Hardlink Target Escape Through Symlink Chain in node-tar Extraction
+1113459 | high | minimatch | minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern
+1113538 | high | minimatch | minimatch has ReDoS: matchOne() combinatorial backtracking via multiple non-adjacent GLOBSTAR segments
+1113546 | high | minimatch | minimatch ReDoS: nested *() extglobs generate catastrophically backtracking regular expressions
+1114200 | high | tar | tar has Hardlink Path Traversal via Drive-Relative Linkpath
+1114302 | high | tar | node-tar Symlink Path Traversal via Drive-Relative Linkpath
+1114680 | high | tar | Race Condition in node-tar Path Reservations via Unicode Ligature Collisions on macOS APFS
+1115527 | high | path-to-regexp | path-to-regexp vulnerable to Regular Expression Denial of Service via multiple route parameters
+1115538 | high | handlebars | Handlebars.js has JavaScript Injection via AST Type Confusion by tampering @partial-block
+1115539 | critical | handlebars | Handlebars.js has JavaScript Injection via AST Type Confusion
+1115693 | high | handlebars | Handlebars.js has JavaScript Injection via AST Type Confusion when passing an object as dynamic partial
+1115694 | high | handlebars | Handlebars.js has Denial of Service via Malformed Decorator Syntax in Template Compilation
+1115806 | high | lodash | lodash vulnerable to Code Injection via `_.template` imports key names
+1117412 | critical | babel-traverse | Babel vulnerable to arbitrary code execution when compiling specifically crafted malicious code
+1117465 | high | handlebars | Handlebars.js has JavaScript Injection in CLI Precompiler via Unescaped Names and Options
+1117689 | high | underscore | Underscore has unlimited recursion in _.flatten and _.isEqual, potential for DoS attack
+1120654 | high | tmp | tmp has Path Traversal via unsanitized prefix/postfix that enables directory escape
+1120745 | high | form-data | form-data: CRLF injection in form-data via unescaped multipart field names and filenames
+1123262 | high | ws | ws: Memory exhaustion DoS from tiny fragments and data chunks
+1123483 | critical | websocket-driver | websocket-driver: Message corruption via abuse of protocol length headers
+1123686 | high | adm-zip | adm-zip: Crafted ZIP file triggers 4GB memory allocation
+1123897 | high | brace-expansion | brace-expansion: DoS via exponential-time expansion of consecutive non-expanding {} groups
+1123912 | high | js-yaml | js-yaml: YAML merge-key chains can force quadratic CPU consumption
+1123940 | critical | tar | node-tar: Decompression/parse DoS via unlimited input
+1123941 | high | tar | node-tar: Negative tar entry size causes infinite loop in archive replace
+1130588 | high | brace-expansion | brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash
+1130737 | high | brace-expansion | brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation
+1138114 | high | js-yaml | JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) — CVE-2026-59870 fix not backported
+1139346 | high | extract-zip | extract-zip unvalidated symlink path traversal
+1145647 | high | tar | node-tar: Uncontrolled recursion in mapHas/filesFilter allows uncatchable stack-overflow DoS via crafted long-path tar with member selection
+1193685 | high | extract-zip | extract-zip allows arbitrary file writes through symlink archive entries
+1193726 | high | js-yaml | js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources
+1239030 | high | adm-zip | adm-zip: Uncontrolled memory allocation via the declared uncompressed size (DoS)
