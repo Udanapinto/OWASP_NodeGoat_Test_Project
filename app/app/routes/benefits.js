@@ -10,46 +10,42 @@ function BenefitsHandler(db) {
 
     const benefitsDAO = new BenefitsDAO(db);
 
+    //member 4
     this.displayBenefits = (req, res, next) => {
-
-        benefitsDAO.getAllNonAdminUsers((error, users) => {
-
-            if (error) return next(error);
-
-            return res.render("benefits", {
-                users,
-                user: {
-                    isAdmin: true
-                },
-                environmentalScripts
+        if (!req.session.userId) {
+            return res.redirect("/login");
+        }
+        userDAO.getUserById(req.session.userId, (err, user) => {
+            if (err) return next(err);
+            if (!user || !user.isAdmin) {
+                return res.status(403).render("403");
+            }
+            benefitsDAO.getAllNonAdminUsers((error, users) => {
+                if (error) return next(error);
+                return res.render("benefits", { users, user: { isAdmin: true } });
             });
         });
     };
 
     this.updateBenefits = (req, res, next) => {
-        const {
-            userId,
-            benefitStartDate
-        } = req.body;
+        if (!req.session.userId) {
+            return res.redirect("/login");
+        }
+        userDAO.getUserById(req.session.userId, (err, user) => {
+            if (err) return next(err);
+            if (!user || !user.isAdmin) {
+                return res.status(403).render("403");
+            }
 
-        benefitsDAO.updateBenefits(userId, benefitStartDate, (error) => {
-
-            if (error) return next(error);
-
-            benefitsDAO.getAllNonAdminUsers((error, users) => {
-                if (error) return next(error);
-
-                const data = {
-                    users,
-                    user: {
-                        isAdmin: true
-                    },
-                    updateSuccess: true,
-                    environmentalScripts
-                };
-
-                return res.render("benefits", data);
-            });
+            // පරණ update කේතය Admin Check එක ඇතුළත ක්‍රියාත්මක වේ
+            benefitsDAO.updateBenefits(
+                req.body.userId,
+                req.body.benefitStartDate,
+                (error) => {
+                    if (error) return next(error);
+                    return res.redirect("/benefits");
+                }
+            );
         });
     };
 }
