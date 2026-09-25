@@ -27,6 +27,7 @@ function BenefitsHandler(db) {
         });
     };
 
+    //member 4
     this.updateBenefits = (req, res, next) => {
         if (!req.session.userId) {
             return res.redirect("/login");
@@ -37,7 +38,7 @@ function BenefitsHandler(db) {
                 return res.status(403).render("403");
             }
 
-            // පරණ update කේතය Admin Check එක ඇතුළත ක්‍රියාත්මක වේ
+            // old update code Admin Check run inside
             benefitsDAO.updateBenefits(
                 req.body.userId,
                 req.body.benefitStartDate,
