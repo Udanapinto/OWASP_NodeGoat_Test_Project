@@ -13,9 +13,9 @@ function AllocationsHandler(db) {
         // Fix for A4 Insecure DOR -  take user id from session instead of from URL param
         const { userId } = req.session;
         */
-        const {
+        const { // member 4
             userId
-        } = req.params;
+        } = req.session;
         const {
             threshold
         } = req.query;
