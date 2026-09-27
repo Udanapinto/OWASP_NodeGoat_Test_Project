@@ -45,3 +45,5 @@ This baseline was captured against the unmodified NodeGoat application (commit `
 - **Weak Session Management (VULN-01):** The `server.js` file (line 78) has multiple session cookie configuration issues (missing `secure`, `httpOnly`, `expires`, etc.), confirming the Weak Session Management threat (T1).
 - **Transport Security:** `server.js` (line 145) uses an insecure HTTP server.
 - **CSRF:** The `express-check-csrf-middleware-usage` (INFO) and the HTML form warnings indicate missing CSRF protection across the application.
+
+
