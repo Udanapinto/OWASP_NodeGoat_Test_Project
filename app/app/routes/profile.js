@@ -1,3 +1,5 @@
+const validator = require("validator");
+
 const ProfileDAO = require("../data/profile-dao").ProfileDAO;
 const ESAPI = require("node-esapi");
 const {
@@ -26,7 +28,7 @@ function ProfileHandler(db) {
             // doesn't end up as an XSS attack, the context is incorrect as it is encoding the firstname for HTML
             // while this same variable is also used in the context of a URL link element
             doc.website = ESAPI.encoder().encodeForHTML(doc.website);
-            // fix it by replacing the above with another template variable that is used for 
+            // fix it by replacing the above with another template variable that is used for
             // the context of a URL in a link header
             // doc.website = ESAPI.encoder().encodeForURL(doc.website)
 
@@ -79,10 +81,13 @@ function ProfileHandler(db) {
             userId
         } = req.session;
 
+        const safeFirstName = validator.escape(firstName);
+        const safeLastName = validator.escape(lastName);
+
         profile.updateUser(
             parseInt(userId),
-            firstName,
-            lastName,
+            safeFirstName,
+            safeLastName,
             ssn,
             dob,
             address,
