@@ -297,7 +297,11 @@
         "node_modules/bl",
         "node_modules/npm/node_modules/request/node_modules/bl"
       ],
-      "fixAvailable": false
+      "fixAvailable": {
+        "name": "grunt-retire",
+        "version": "0.1.0",
+        "isSemVerMajor": true
+      }
     },
     "body-parser": {
       "name": "body-parser",
@@ -364,7 +368,11 @@
         "node_modules/npm/node_modules/request/node_modules/hawk/node_modules/boom",
         "node_modules/zaproxy/node_modules/boom"
       ],
-      "fixAvailable": false
+      "fixAvailable": {
+        "name": "grunt-retire",
+        "version": "0.1.0",
+        "isSemVerMajor": true
+      }
     },
     "boxen": {
       "name": "boxen",
@@ -815,7 +823,11 @@
         "node_modules/npm/node_modules/request/node_modules/hawk/node_modules/cryptiles",
         "node_modules/zaproxy/node_modules/cryptiles"
       ],
-      "fixAvailable": false
+      "fixAvailable": {
+        "name": "grunt-retire",
+        "version": "0.1.0",
+        "isSemVerMajor": true
+      }
     },
     "csurf": {
       "name": "csurf",
@@ -1462,7 +1474,11 @@
         "node_modules/npm/node_modules/request/node_modules/form-data",
         "node_modules/zaproxy/node_modules/form-data"
       ],
-      "fixAvailable": false
+      "fixAvailable": {
+        "name": "grunt-retire",
+        "version": "0.1.0",
+        "isSemVerMajor": true
+      }
     },
     "fsevents": {
       "name": "fsevents",
@@ -2240,7 +2256,11 @@
         "node_modules/npm/node_modules/request/node_modules/hawk",
         "node_modules/zaproxy/node_modules/hawk"
       ],
-      "fixAvailable": false
+      "fixAvailable": {
+        "name": "grunt-retire",
+        "version": "0.1.0",
+        "isSemVerMajor": true
+      }
     },
     "helmet": {
       "name": "helmet",
@@ -2335,7 +2355,11 @@
         "node_modules/npm/node_modules/request/node_modules/hawk/node_modules/hoek",
         "node_modules/zaproxy/node_modules/hoek"
       ],
-      "fixAvailable": false
+      "fixAvailable": {
+        "name": "grunt-retire",
+        "version": "0.1.0",
+        "isSemVerMajor": true
+      }
     },
     "hosted-git-info": {
       "name": "hosted-git-info",
@@ -3173,7 +3197,11 @@
       "nodes": [
         "node_modules/zaproxy/node_modules/mime"
       ],
-      "fixAvailable": false
+      "fixAvailable": {
+        "name": "grunt-retire",
+        "version": "0.1.0",
+        "isSemVerMajor": true
+      }
     },
     "minimatch": {
       "name": "minimatch",
@@ -3378,8 +3406,8 @@
         "node_modules/rc/node_modules/minimist"
       ],
       "fixAvailable": {
-        "name": "mocha",
-        "version": "12.0.2",
+        "name": "forever",
+        "version": "4.0.3",
         "isSemVerMajor": true
       }
     },
@@ -4231,7 +4259,11 @@
         "node_modules/request/node_modules/qs",
         "node_modules/zaproxy/node_modules/qs"
       ],
-      "fixAvailable": false
+      "fixAvailable": {
+        "name": "grunt-retire",
+        "version": "0.1.0",
+        "isSemVerMajor": true
+      }
     },
     "randomatic": {
       "name": "randomatic",
@@ -4366,7 +4398,11 @@
         "node_modules/request",
         "node_modules/zaproxy/node_modules/request"
       ],
-      "fixAvailable": false
+      "fixAvailable": {
+        "name": "grunt-retire",
+        "version": "0.1.0",
+        "isSemVerMajor": true
+      }
     },
     "retire": {
       "name": "retire",
@@ -4617,7 +4653,11 @@
         "node_modules/sntp",
         "node_modules/zaproxy/node_modules/sntp"
       ],
-      "fixAvailable": false
+      "fixAvailable": {
+        "name": "grunt-retire",
+        "version": "0.1.0",
+        "isSemVerMajor": true
+      }
     },
     "source-map-resolve": {
       "name": "source-map-resolve",
@@ -5187,8 +5227,8 @@
         "node_modules/tmp"
       ],
       "fixAvailable": {
-        "name": "selenium-webdriver",
-        "version": "4.49.0",
+        "name": "cypress",
+        "version": "16.1.0",
         "isSemVerMajor": true
       }
     },
@@ -5256,7 +5296,11 @@
         "node_modules/npm/node_modules/request/node_modules/tough-cookie",
         "node_modules/tough-cookie"
       ],
-      "fixAvailable": false
+      "fixAvailable": {
+        "name": "grunt-retire",
+        "version": "0.1.0",
+        "isSemVerMajor": true
+      }
     },
     "trim-newlines": {
       "name": "trim-newlines",
@@ -5319,7 +5363,11 @@
         "node_modules/npm/node_modules/request/node_modules/tunnel-agent",
         "node_modules/tunnel-agent"
       ],
-      "fixAvailable": false
+      "fixAvailable": {
+        "name": "grunt-retire",
+        "version": "0.1.0",
+        "isSemVerMajor": true
+      }
     },
     "uglify-js": {
       "name": "uglify-js",
@@ -5499,7 +5547,11 @@
       "nodes": [
         "node_modules/uuid"
       ],
-      "fixAvailable": false
+      "fixAvailable": {
+        "name": "grunt-retire",
+        "version": "0.1.0",
+        "isSemVerMajor": true
+      }
     },
     "websocket-driver": {
       "name": "websocket-driver",

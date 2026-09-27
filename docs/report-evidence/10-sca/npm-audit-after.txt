@@ -631,7 +631,7 @@ minimatch has a ReDoS via repeated wildcards with non-matching literal in patter
 minimatch has ReDoS: matchOne() combinatorial backtracking via multiple non-adjacent GLOBSTAR segments - https://github.com/advisories/GHSA-7r86-cg39-jmmj
 minimatch ReDoS: nested *() extglobs generate catastrophically backtracking regular expressions - https://github.com/advisories/GHSA-23c5-xmqv-rm74
 fix available via `npm audit fix --force`
-Will install grunt-contrib-watch@0.4.4, which is a breaking change
+Will install mocha@12.0.2, which is a breaking change
 node_modules/fsevents/node_modules/minimatch
 node_modules/minimatch
 node_modules/mocha/node_modules/minimatch
