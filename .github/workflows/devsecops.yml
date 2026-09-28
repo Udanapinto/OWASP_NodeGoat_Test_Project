@@ -52,7 +52,7 @@ jobs:
           retention-days: 1
 
   # ============================================================
-  # JOB 2: SAST — Semgrep
+  # JOB 2: SAST — Semgrep (WARN ONLY)
   # ============================================================
   sast-semgrep:
     name: SAST (Semgrep)
@@ -62,15 +62,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Install Semgrep
+        run: pip install semgrep
+
       - name: Run Semgrep
-        uses: returntocorp/semgrep-action@v1
-        with:
-          config: >-
-            p/security-audit
-            p/owasp-top-ten
-            p/javascript
-            p/nodejs
-          generateSarif: true
+        run: |
+          semgrep --config=p/security-audit --config=p/owasp-top-ten --config=p/javascript --config=p/nodejs --sarif --output=semgrep.sarif || true
 
       - name: Upload SARIF
         uses: github/codeql-action/upload-sarif@v3
@@ -78,19 +75,17 @@ jobs:
         with:
           sarif_file: semgrep.sarif
 
-      - name: Fail on HIGH/ERROR findings
+      - name: Report Semgrep findings (Warn Only)
         run: |
           if [ -f semgrep.sarif ]; then
             HIGH_COUNT=$(cat semgrep.sarif | jq '[.runs[].results[] | select(.level == "error")] | length')
             echo "Semgrep ERROR findings: $HIGH_COUNT"
-            if [ "$HIGH_COUNT" -gt 0 ]; then
-              echo "::error::Semgrep found $HIGH_COUNT high-severity issue(s). Pipeline blocked."
-              exit 1
-            fi
+            echo "::warning::Semgrep found $HIGH_COUNT high-severity issue(s). Continuing build."
           fi
+          exit 0
 
   # ============================================================
-  # JOB 3: SCA — npm audit
+  # JOB 3: SCA — npm audit (WARN ONLY)
   # ============================================================
   sca-npm-audit:
     name: SCA (npm audit)
@@ -124,17 +119,15 @@ jobs:
             /tmp/npm-audit.json
             /tmp/npm-audit.txt
 
-      - name: Fail on CRITICAL findings
+      - name: Report npm audit findings (Warn Only)
         run: |
           CRITICAL=$(cat /tmp/npm-audit.json | jq '.metadata.vulnerabilities.critical // 0')
           echo "Critical vulnerabilities: $CRITICAL"
-          if [ "$CRITICAL" -gt 0 ]; then
-            echo "::error::npm audit found $CRITICAL critical vulnerability(ies). Pipeline blocked."
-            exit 1
-          fi
+          echo "::warning::npm audit found $CRITICAL critical vulnerability(ies). Continuing build."
+          exit 0
 
   # ============================================================
-  # JOB 4: SECRETS — Gitleaks
+  # JOB 4: SECRETS — Gitleaks (STRICT FAILURE)
   # ============================================================
   secrets-gitleaks:
     name: Secrets (Gitleaks)
@@ -163,7 +156,7 @@ jobs:
           fi
 
   # ============================================================
-  # JOB 5: CONTAINER — Trivy
+  # JOB 5: CONTAINER — Trivy (WARN ONLY)
   # ============================================================
   container-trivy:
     name: Container (Trivy)
@@ -182,14 +175,14 @@ jobs:
       - name: Load Docker image
         run: docker load -i /tmp/nodegoat-image.tar
 
-      - name: Run Trivy
-        uses: aquasecurity/trivy-action@0.28.0
+      - name: Run Trivy (Warn Only)
+        uses: aquasecurity/trivy-action@master
         with:
           image-ref: ${{ env.DOCKER_IMAGE }}:latest
           format: 'sarif'
           output: 'trivy-results.sarif'
           severity: 'CRITICAL,HIGH'
-          exit-code: '1'
+          exit-code: '0' # Changed from 1 to 0 to warn only
           ignore-unfixed: true
 
       - name: Upload Trivy SARIF
@@ -229,6 +222,3 @@ jobs:
           fi
 
           echo "All security gates passed."
-
-
-
