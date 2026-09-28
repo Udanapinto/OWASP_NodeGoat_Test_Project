@@ -1,36 +1,28 @@
 services:
-
   web:
     build:
       context: ./app
       dockerfile: Dockerfile
-
     environment:
       NODE_ENV: development
-      MONGODB_URI: mongodb://mongo:27017/nodegoat
-
+      MONGODB_URI: ${MONGODB_URI:-mongodb://mongo:27017/nodegoat}
+      SESSION_SECRET: ${SESSION_SECRET:-dev-only-fallback}
+      APP_SECRET: ${APP_SECRET:-dev-only-fallback}
+    env_file:
+      - .env
     command: >
       sh -c "
-      until nc -z -w 2 mongo 27017
-      && echo 'MongoDB is ready'
-      && node artifacts/db-reset.js
-      && npm start;
-      do
-        echo 'Waiting for MongoDB...';
-        sleep 2;
-      done
-      "
-
+        until nc -z -w 2 mongo 27017 && echo 'MongoDB is ready' && node artifacts/db-reset.js && npm start; do
+          echo 'Waiting for MongoDB...'; sleep 2;
+        done"
     ports:
       - "127.0.0.1:4000:4000"
-
     depends_on:
       - mongo
 
   mongo:
     image: mongo:4.4
-
     user: mongodb
-
     expose:
       - "27017"
+
