@@ -15,7 +15,7 @@ const marked = require("marked");
 const app = express(); // Web framework to handle routing requests
 const routes = require("./app/routes");
 const { port, db, cookieSecret } = require("./config/config"); // Application config properties
-const mongoUri = process.env.MONGODB_URI || "mongodb://mongo:27017/nodegoat";
+const mongoUri = process.env.MONGODB_URI || "mongodb://mongo:27017/nodegoat"; // member 3 additional part, already add in member 4 part
 /*
 // Fix for A6-Sensitive Data Exposure
 // Load keys for establishing secure HTTPS connection
@@ -80,7 +80,7 @@ MongoClient.connect(mongoUri, (err, db) => {
         // genid: (req) => {
         //    return genuuid() // use UUIDs for session IDs
         //},
-        secret: process.env.SESSION_SECRET || "dev-only-fallback-secret",
+        secret: process.env.SESSION_SECRET || "dev-only-fallback-secret", // member 3 additional part, already add in member 4 part
         // Both mandatory in Express v4
         saveUninitialized: true,
         resave: true,
