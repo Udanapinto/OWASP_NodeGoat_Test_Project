@@ -65,24 +65,10 @@ jobs:
       - name: Install Semgrep
         run: pip install semgrep
 
-      - name: Run Semgrep
+      - name: Run Semgrep (Warn Only)
         run: |
-          semgrep --config=p/security-audit --config=p/owasp-top-ten --config=p/javascript --config=p/nodejs --sarif --output=semgrep.sarif || true
-
-      - name: Upload SARIF
-        uses: github/codeql-action/upload-sarif@v3
-        if: always()
-        with:
-          sarif_file: semgrep.sarif
-
-      - name: Report Semgrep findings (Warn Only)
-        run: |
-          if [ -f semgrep.sarif ]; then
-            HIGH_COUNT=$(cat semgrep.sarif | jq '[.runs[].results[] | select(.level == "error")] | length')
-            echo "Semgrep ERROR findings: $HIGH_COUNT"
-            echo "::warning::Semgrep found $HIGH_COUNT high-severity issue(s). Continuing build."
-          fi
-          exit 0
+          semgrep --config=p/security-audit --config=p/owasp-top-ten --config=p/javascript --config=p/nodejs || true
+          echo "Semgrep scan complete. Any findings above are warnings only."
 
   # ============================================================
   # JOB 3: SCA — npm audit (WARN ONLY)
@@ -179,17 +165,10 @@ jobs:
         uses: aquasecurity/trivy-action@master
         with:
           image-ref: ${{ env.DOCKER_IMAGE }}:latest
-          format: 'sarif'
-          output: 'trivy-results.sarif'
+          format: 'table'
           severity: 'CRITICAL,HIGH'
-          exit-code: '0' # Changed from 1 to 0 to warn only
+          exit-code: '0'
           ignore-unfixed: true
-
-      - name: Upload Trivy SARIF
-        uses: github/codeql-action/upload-sarif@v3
-        if: always()
-        with:
-          sarif_file: trivy-results.sarif
 
   # ============================================================
   # JOB 6: SECURITY GATE — Aggregate Decision
