@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # OWASP NodeGoat DevSecOps Security Project
 
 IE3142 - DevOps Security
@@ -54,4 +54,4 @@ Not configured yet.
 Docker setup will be added in the next implementation phase.
 =======
 # OWASP_NodeGoat_Test_Project
->>>>>>> a94a7b8b127677f8a3bef1d93df185f5414500f7
+
